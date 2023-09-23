@@ -1,0 +1,1 @@
+export const NOW_MOVIE_PAGE_NEXT = "NOW_MOVIE_PAGE_NEXT";
