@@ -5,11 +5,9 @@ import {
   TouchableOpacity,
   ActivityIndicator,
 } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { Movie } from "../interfaces/movieInterface";
 import { useNavigation } from "@react-navigation/native";
-
-// https://image.tmdb.org/t/p/original + movie.poster_path
 
 interface Props {
   movie: Movie;
@@ -19,6 +17,8 @@ interface Props {
 
 export const MoviePoster = ({ movie, height = 400, width = 260 }: Props) => {
   const uri = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
+
+  const [isLoading, setIsLoading] = useState(true);
 
   const navigation = useNavigation<any>();
   return (
@@ -31,8 +31,25 @@ export const MoviePoster = ({ movie, height = 400, width = 260 }: Props) => {
         marginHorizontal: 8,
       }}
     >
-      <View style={styles.container}>
+      <View
+        style={{
+          ...styles.container,
+        }}
+      >
+        {isLoading && (
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <ActivityIndicator color="#202020" />
+          </View>
+        )}
+
         <Image
+          onLoadEnd={() => setIsLoading(false)}
           source={{
             uri,
           }}

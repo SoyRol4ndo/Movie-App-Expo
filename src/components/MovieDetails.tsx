@@ -5,6 +5,7 @@ import currencyFormatter from "currency-formatter";
 import { FullMovie } from "../interfaces/movieInterface";
 import { Cast } from "../interfaces/creditsInterface";
 import CastItem from "./CastItem";
+import { Author } from "./Author";
 
 interface Props {
   fullmovie: FullMovie;
@@ -41,7 +42,7 @@ const MovieDetails = ({ cast, fullmovie }: Props) => {
         <Text
           style={{
             fontSize: 16,
-            textAlign: "justify",
+            textAlign: "auto",
             marginHorizontal: 10,
             marginBottom: 10,
           }}
@@ -121,6 +122,7 @@ const MovieDetails = ({ cast, fullmovie }: Props) => {
           keyExtractor={(item) => item.id.toString()}
           renderItem={({ item }) => <CastItemMemoized actor={item} />}
           horizontal={true}
+          ListFooterComponent={() => <Author />}
           showsHorizontalScrollIndicator={false}
           style={{ margin: 10 }}
         />
