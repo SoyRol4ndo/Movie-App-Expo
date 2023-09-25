@@ -1,36 +1,36 @@
-# TypeScript Example
+# Movie App
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  <!-- Web -->
-  <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-</p>
+Esta es una aplicación en Expo que utiliza la API de Movie DB para mostrar información sobre películas.
 
+## Configuración
+
+1. Clona este repositorio en tu máquina local.
+2. Asegúrate de tener Expo CLI instalado globalmente ejecutando `npm install -g expo-cli`.
+3. Ejecuta `npm install` para instalar las dependencias del proyecto.
+4. Crea una cuenta en [Movie DB](https://www.themoviedb.org/) y obtén una API key.
+5. Crea un archivo `.env` en la raíz del proyecto y agrega tu API key de la siguiente manera:
 ```sh
-npx create-react-native-app -t with-typescript
+EXPO_PUBLIC_API_KEY=YOUR_API_KEY
 ```
 
-TypeScript is a superset of JavaScript which gives you static types and powerful tooling in Visual Studio Code including autocompletion and useful inline warnings for type errors.
+6. Ejecuta `expo start` para iniciar el servidor de desarrollo de Expo.
 
-## 🚀 How to use
+## Funcionalidades
 
-#### Creating a new project
+- Buscar películas por título.
+- Ver detalles de una película específica.
+- Guardar películas como favoritas.
 
-- Install the CLI: `npm i -g expo-cli`
-- Create a project: `npx create-react-native-app -t with-typescript`
-- `cd` into the project
+## Tecnologías utilizadas
 
-### Adding TypeScript to existing projects
+- React Native
+- Expo SDK
+- Axios
 
-- Create a blank TypeScript config: `touch tsconfig.json`
-- Run `yarn start` or `npm run start` to automatically configure TypeScript
-- Rename files to TypeScript, `.tsx` for React components and `.ts` for plain typescript files
+## Contribución
 
-> 💡 You can disable the TypeScript setup in Expo CLI with the environment variable `EXPO_NO_TYPESCRIPT_SETUP=1 expo start`
+Si deseas contribuir a este proyecto, por favor sigue las pautas de contribución descritas en [CONTRIBUTING.md](link_to_contributing.md).
 
-## 📝 Notes
+## Licencia
 
-- [Expo TypeScript guide](https://docs.expo.dev/versions/latest/guides/typescript/)
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE.md](link_to_license.md) para más detalles.
